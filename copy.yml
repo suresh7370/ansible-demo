@@ -1,0 +1,13 @@
+---
+-
+  become: true
+  become_method: sudo
+  become_user: root
+  hosts: "192.168.48.155"
+  tasks:
+    -
+      copy:
+        src: /first/dummy/
+        dest: /opt/tomcat/tep/webapps/
+        force: yes
+      name: "Remove directory"
